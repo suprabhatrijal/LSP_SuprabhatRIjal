@@ -397,6 +397,16 @@ class IntegerSetTest {
 		
 		assertThrows(IntegerSetException.class, ()-> testSet2.largest());
 	}
+	
+	@Test
+	@DisplayName("Test cases for largest method to check if appropriate method is thrown")
+	void testLargestException() {
+	
+	IntegerSet testSet1 = new IntegerSet();
+	
+	Exception exception = assertThrows(IntegerSetException.class, ()-> testSet1.largest());
+	assertEquals("IntegerSetException: Set is Empty", exception.getMessage());
+	}
 
 	
 	
@@ -428,6 +438,15 @@ class IntegerSetTest {
 
 
 	}
+	
+	@Test
+	@DisplayName("Test cases for smallest method to check if appropriate exception is thrown")
+	void testSmallestException() {
+		IntegerSet testSet1 = new IntegerSet();
+		
+		Exception exception = assertThrows(IntegerSetException.class, ()-> testSet1.smallest());
+		assertEquals("IntegerSetException: Set is Empty", exception.getMessage());
+}
 
 	
 	@Test

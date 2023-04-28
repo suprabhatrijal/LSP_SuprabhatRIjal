@@ -2,9 +2,11 @@ package org.howard.edu.lsp.finals.problem;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 import java.util.HashSet;
 import java.util.Set;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class SongDatabaseTest {
@@ -12,6 +14,7 @@ class SongDatabaseTest {
 
 	
 	@Test
+	@DisplayName("Testing getSongs()")
 	void testGetSongs() {
 		
 		// Check if the correct set of songs is returned
@@ -37,6 +40,7 @@ class SongDatabaseTest {
 		
 	}
 	@Test
+	@DisplayName("Testing getSongGenre()")
 	void testGetSongGenre() {
 		Set expectedPopSet = new HashSet<String>();
 		expectedPopSet.add("Apple");
@@ -60,6 +64,7 @@ class SongDatabaseTest {
 	}
 	
 	@Test
+	@DisplayName("Testing addSong()")
 	void testAddSong() {
 		
 		

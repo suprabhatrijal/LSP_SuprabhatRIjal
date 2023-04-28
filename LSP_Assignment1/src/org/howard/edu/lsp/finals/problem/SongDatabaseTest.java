@@ -28,6 +28,10 @@ class SongDatabaseTest {
 		db.addSong("Pop", "Ball");
 		assertEquals(db.getSongs("Pop"),expectedPopSet);	
 		
+		assertTrue(db.getSongs("Pop").contains("Apple"));
+		assertTrue(db.getSongs("Pop").contains("Ball"));
+		
+		
 		// Check if the correct set of songs is returned
 		Set expectedRapSet = new HashSet<String>();
 		expectedRapSet.add("Cat");
@@ -51,6 +55,7 @@ class SongDatabaseTest {
 		db.addSong("Pop", "Apple");
 		db.addSong("Pop", "Ball");
 		assertEquals(db.getGenreOfSong("Apple"), "Pop");	
+		assertEquals(db.getGenreOfSong("Ball"), "Pop");	
 		
 		Set expectedRapSet = new HashSet<String>();
 		expectedRapSet.add("Cat");
